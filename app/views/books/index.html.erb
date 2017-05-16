@@ -6,3 +6,7 @@
   <input type="text" name="title" />
   <input type="submit" value="Ajouter le livre" />
 <% end %>
+<h2>Liste des livres</h2>
+<% @books.each do |book| %>
+  <p><a href="/books/<%= book.id %>"><%= book.title %></a></p>
+<% end %>
