@@ -4,6 +4,8 @@ class BooksController < ApplicationController
   end
 
   def create
-
+  Book.create title: params[:title]
+   redirect_to "/books"
   end
+
 end
